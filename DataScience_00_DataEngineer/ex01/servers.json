@@ -1,0 +1,14 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "Piscine Auto Server",
+            "Group": "Servers",
+            "Host": "postgres_db",
+            "Port": 5432,
+            "MaintenanceDB": "piscineds",
+            "Username": "tde-raev",
+            "SSLMode": "prefer",
+            "PassFile": "/tmp/pgpassfile"
+        }
+    }
+}
