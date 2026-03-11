@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS data_2022_oct (
+CREATE TABLE IF NOT EXISTS data_2023_feb (
     event_time TIMESTAMP,
     event_type TEXT,
     product_id INTEGER,
@@ -7,4 +7,4 @@ CREATE TABLE IF NOT EXISTS data_2022_oct (
     user_session UUID
 );
 
-COPY data_2022_oct FROM '/subject/customer/data_2022_oct.csv' DELIMITER ',' CSV HEADER;
+COPY data_2023_feb FROM '/goinfre/tde-raev/DataScience/DataScience_01_DataWarehouse/data_2023_feb.csv' DELIMITER ',' CSV HEADER;

@@ -11,8 +11,8 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql
-#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-#      - ../subject/customer/data_2022_oct.csv:/subject/customer/data_2022_oct.csv
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - /goinfre/tde-raev/DataScience/DataScience_01_DataWarehouse/data_2023_feb.csv:/tmp/data_2023_feb.csv
 
   pgadmin:
     image: dpage/pgadmin4
