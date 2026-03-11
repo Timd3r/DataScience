@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS items (
-    product_id SERIAL PRIMARY KEY,
+    product_id INTEGER,
     category_id BIGINT,
     category_code VARCHAR(255),
     brand VARCHAR(255)
