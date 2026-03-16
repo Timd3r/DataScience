@@ -30,16 +30,6 @@ def generate_sql():
             
             # USE THE DOCKER PATH HERE
             sql_file.write(f"COPY {table_name} FROM '{docker_data_path}/{file.name}' WITH (FORMAT csv, HEADER true);\n\n")
-        
-        # Corrected '1 big table' logic
-        sql_file.write("CREATE TABLE IF NOT EXISTS customers AS\n")
-        for i, table in enumerate(table_names):
-            sql_file.write(f"    SELECT * FROM {table}")
-            if i < len(table_names) - 1:
-                sql_file.write("\n    UNION ALL\n")
-            else:
-                sql_file.write(";\n")
-                
     print(f"✅ SQL script generated with internal container paths: {output_file}")
 
 if __name__ == "__main__":

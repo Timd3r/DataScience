@@ -14,7 +14,7 @@ services:
       - ./tables.sql:/docker-entrypoint-initdb.d/tables.sql
       - /goinfre/tde-raev/DataScience/DataScience_01_DataWarehouse/subject/customer:/tmp/customer
       - /goinfre/tde-raev/DataScience/DataScience_01_DataWarehouse/subject/item:/tmp/item
-
+      
 
   pgadmin:
     image: dpage/pgadmin4

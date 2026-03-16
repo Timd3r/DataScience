@@ -8,12 +8,13 @@ services:
       POSTGRES_PASSWORD: mysecretpassword
       POSTGRES_DB: piscineds
     ports:
-      - "5432:5432"
+      - "5433:5433"
     volumes:
       - postgres_data:/var/lib/postgresql
       - ./tables.sql:/docker-entrypoint-initdb.d/tables.sql
       - /goinfre/tde-raev/DataScience/DataScience_01_DataWarehouse/subject/customer:/tmp/customer
-      
+      - /goinfre/tde-raev/DataScience/DataScience_01_DataWarehouse/subject/item:/tmp/item
+
 
   pgadmin:
     image: dpage/pgadmin4
